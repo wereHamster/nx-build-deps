@@ -5,9 +5,9 @@
     "build": {
       "executor": "nx:run-commands",
       "inputs": [],
-      "outputs": [],
+      "outputs": ["{projectRoot}/output.txt"],
       "options": {
-        "command": "echo bar"
+        "command": "cat projects/foo/output.txt > projects/bar/output.txt"
       },
       "dependsOn": [
         "^build"
